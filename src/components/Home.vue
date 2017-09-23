@@ -3,27 +3,28 @@
   <Navbar></Navbar>
   <Sidebar></Sidebar>
   <div class="content container">
-    <div class="mission">
-      <ul>
-        <li>
-          <img src="http://lorempixum.com/100/100/nature/1" >
-          <router-link to="/mission?id=1"><h3>The Grasslands</h3></router-link>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent euismod ultrices ante, ac laoreet nulla vestibulum adipiscing. Nam quis justo in augue auctor imperdiet.</p>
-        </li>
-          
-        <li>
-          <img src="http://lorempixum.com/100/100/nature/2" >
-          <router-link to="/mission?id=2"><h3>The Grasslands</h3></router-link>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent euismod ultrices ante, ac laoreet nulla vestibulum adipiscing. Nam quis justo in augue auctor imperdiet.</p>
-        </li>
-
-        <li>
-          <img src="http://lorempixum.com/100/100/nature/3" >
-          <router-link to="/mission?id=3"><h3>The Grasslands</h3></router-link>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent euismod ultrices ante, ac laoreet nulla vestibulum adipiscing. Nam quis justo in augue auctor imperdiet.</p>
-        </li>
-
-      </ul>
+    <div class="header">
+        <div class="logo">
+            <img width="200px" src="../assets/logo.png"><br>
+            <img width="200px" src="../assets/LM.png">
+        </div>
+    </div>
+    <div class="quest">
+        <img width="200px" src="../assets/Quest.png">
+    </div>
+    <div class="blockList">
+        <ul class="list">
+        <li><img src="../assets/Diamond.png" width="20px">&nbsp;Intermediate Spanish</li>
+        <li><img src="../assets/Diamond.png" width="20px">&nbsp;Microsoft Word</li>
+        <li><img src="../assets/Diamond.png" width="20px">&nbsp;Microsoft Power Point</li>
+        <li><img src="../assets/Diamond.png" width="20px">&nbsp;Microsoft Excel</li>
+        <li><img src="../assets/Diamond.png" width="20px">&nbsp;Dreamweaver</li>
+        <li><span class="rewards">REWARDS</span>Adobe Photoshop</li>
+        <li><span class="rewards">REWARDS</span>CAD Lab</li>
+        <li><span class="rewards">REWARDS</span>Visual Basic</li>
+        <li><span class="rewards">REWARDS</span>C++</li>
+        <li><span class="rewards">REWARDS</span>Java</li>
+    </ul>
     </div>
   </div>
 </div>
@@ -43,7 +44,46 @@ export default {
 .mission{
   padding: 50px;
 }
+.header {
+  width: 100%;
+  height: 300px;
+  background-image: url("../assets/Sky.jpg");
+  background-size: cover;
+  background-position: center center;
+  position: relative;
+}
+.logo{
+    display: block;
+    margin: auto;
+    text-align: center;
+}
+.quest{
+    display: block;
+    margin: auto;
+    text-align: center;
+}
 
+.list
+{
+-moz-column-count: 2;
+-moz-column-gap: 2.5em;
+-webkit-column-count: 2;
+-webkit-column-gap: 2.5em;
+column-count: 2;
+column-gap: 2.5em;
+}
+.blockList{
+    margin-top: 10px;
+    display: block;
+    margin: auto;
+    width: 500px;
+}
+.rewards{
+    font-weight: bold;
+    color:#00aeef;
+    margin-right: 10px;
+    text-shadow: 1px 1px #000;
+}
 .mission ul li{
   margin-bottom: 50px;
 }
