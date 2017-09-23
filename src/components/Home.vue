@@ -5,14 +5,16 @@
     <div class="content">
       <div class="data-form" v-for="d in data">
         {{formatDate(new Date())}}
-        <div class="data-key" v-for="header in d.header">
+        <div v-for="header in d.header">
           {{header}}
         </div>
-        <div class="data-total">
+        <div class="data-key">
           Total: {{d.total}}
         </div>
       </div>
-      Rp{{currencyFormatter(totalDay)}}
+      <div>Total Expenses on {{formatDate(new Date())}}: 
+        <div class="data-key">Rp{{currencyFormatter(totalDay)}}</div>
+        </div>
       <div class="speech-form">
         <button @click="speechToText()"><i class="fa fa-microphone"></i></button>
         <div v-for="s in stringSpeech">
@@ -39,7 +41,7 @@ export default {
       counter       : 0,
       result        : [],
       data          : [],
-      totalDay      : 0
+      totalDay      : ""
     }
   },
   methods:{
@@ -59,14 +61,15 @@ export default {
     },
     save(){
       var self = this;
+      let tmp = 0
       let inputData = {
         header: self.stringSpeech,
         total : self.numberSpeech
       }
       self.data.push(inputData)
       for(let i = 0; i < self.data.length; i++){
-        self.totalDay += +self.data[i].total.replace(/\D/g, '')
-        console.log(+self.data[i].total.replace(/\D/g, ''));
+        tmp += +self.data[i].total.replace(/\D/g, '')
+        self.totalDay = tmp
       }
       self.stringSpeech = []
       self.numberSpeech = 0
@@ -202,6 +205,10 @@ export default {
 </script>
 
 <style lang="css">
+  .speech-form{
+    margin-top: 50px;
+  }
+  
   .data-form{
     margin: 40px;  
   }
