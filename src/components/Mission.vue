@@ -14,8 +14,19 @@
         </ul>
       </nav>
       </div>
+      <div class="progress">
+        <div class="progress-bar" role="progressbar" aria-valuenow="10"
+        aria-valuemin="0" aria-valuemax="100" style="width:0%" v-if="progress === false">
+          <p class="value">0%</p>
+        </div>
+        <div class="progress-bar" role="progressbar" aria-valuenow="10"
+        aria-valuemin="0" aria-valuemax="100" style="width:20%" v-if="progress === true">
+          20%
+        </div>
+      </div>
       <div class="detail">
         <h3 class="title">{{missions[mission].quest[index]}}</h3>
+        <button class="btn btn-success" @click="report()">Submit</button>
       </div>
     </div>
   </div>
@@ -48,7 +59,8 @@ export default {
         "quest"  :["a","b"],
         "reward" : "url"
       }],
-      index:""
+      index:"",
+      progress: false
     }
   },
   methods:{
@@ -57,6 +69,18 @@ export default {
     },
     setQuest(index){
       this.index = index
+    },
+    report(){
+      var self = this
+      console.log(self.missions[self.mission].quest[self.index]);
+      axios.post(`http://localhost:3000/sendEmail`,{
+        image: 'https://cdn.shopify.com/s/files/1/0232/3305/products/MB6_profile_wheels.gif?v=1491334961',
+        quest: self.missions[self.mission].quest[self.index]
+      })
+      .then(res=>{
+        console.log(res);
+        setTimeout(()=>{self.progress = true},7000)
+      })
     }
   },
   created: function(){
@@ -66,6 +90,11 @@ export default {
 </script>
 
 <style lang="css">
+.value{
+  color: black;
+  text-align: center;
+  font-weight: bold;
+}
 
 .wrap {
  display: inline-block;
