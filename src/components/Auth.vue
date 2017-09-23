@@ -1,13 +1,11 @@
 <template>
   <div class="body">
     <div class="login-form">
-      <!-- <img class="logo"
-        src="https://lh4.googleusercontent.com/FUeR_vfW20c0t9aGpMDaD5n4NkcP6oJ_zT8Ub6bysfP4NfK8IMh7YSgoHRLY12csRD17Tm1hZ8Jm6B8=w1366-h662-rw"
-        alt="logo" />
-        <img class="logo-text"
-          src="https://lh6.googleusercontent.com/0SqgRXxPg04yk4EX1fbs8QkvCMWL5oo-gO5nVha02OrN6rOKg-HEhqSOXn7HETqxYdN0Ya1LFx9cR18=w1366-h662"
-          alt="logo" /> -->
-       <div class="form-group">
+      <div class="form-group logo">
+          <img width="100px" src="../assets/logo.png"><br>
+          <img width="100px" src="../assets/LM.png">
+      </div>
+       <div class="input form-group">
          <input type="text" class="form-control" placeholder="Username " id="UserName" />
          <i class="fa fa-user"></i>
        </div>
@@ -30,7 +28,8 @@ export default {
   },
   methods:{
     login(){
-         this.$router.push('/')
+        //  this.$router.push('/')
+        window.location = '/'
     }
   }
 }
@@ -46,6 +45,9 @@ export default {
   font-family: arial;
 }
 
+.input{
+  margin-top: 50px;
+}
 .logo {
   width: 120px;
   height: 120px;

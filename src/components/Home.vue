@@ -2,29 +2,28 @@
   <div>
   <Navbar></Navbar>
   <Sidebar></Sidebar>
-  <div class="content container">
-    <div class="header">
+  <div class="content">
+    <div class="header container">
         <div class="logo">
             <img width="200px" src="../assets/logo.png"><br>
             <img width="200px" src="../assets/LM.png">
         </div>
     </div>
-    <div class="quest">
-        <img width="200px" src="../assets/Quest.png">
-    </div>
     <div class="blockList">
-        <ul class="list">
-        <li><img src="../assets/Diamond.png" width="20px">&nbsp;Intermediate Spanish</li>
-        <li><img src="../assets/Diamond.png" width="20px">&nbsp;Microsoft Word</li>
-        <li><img src="../assets/Diamond.png" width="20px">&nbsp;Microsoft Power Point</li>
-        <li><img src="../assets/Diamond.png" width="20px">&nbsp;Microsoft Excel</li>
-        <li><img src="../assets/Diamond.png" width="20px">&nbsp;Dreamweaver</li>
-        <li><span class="rewards">REWARDS</span>Adobe Photoshop</li>
-        <li><span class="rewards">REWARDS</span>CAD Lab</li>
-        <li><span class="rewards">REWARDS</span>Visual Basic</li>
-        <li><span class="rewards">REWARDS</span>C++</li>
-        <li><span class="rewards">REWARDS</span>Java</li>
-    </ul>
+    <div class="col-md-12">
+      <div class="title"><img class="diamond" src="http://www.smiledesignnyc.com/wp-content/uploads/2016/10/Animated-Icon-for-cutting-edge-education.gif" width="20px">
+        <router-link to="/mission?id=1">Tanggung Jawab</router-link></div>
+      <div class="title"><span class="rewards">REWARDS</span><br />
+        <img class="photo" src="https://eigeradventure.com/media/catalog/product/cache/1/image/9df78eab33525d08d6e5fb8d27136e95/2/1/2174e01a-1.jpg">
+      </div>
+    </div>
+    <div class="col-md-12">
+      <div class="title"><img class="diamond" src="http://www.smiledesignnyc.com/wp-content/uploads/2016/10/Animated-Icon-for-cutting-edge-education.gif" width="20px">&nbsp;
+        <router-link to="/mission?id=2">Kebersihan</router-link></div>
+      <div class="title"><span class="rewards">REWARDS</span><br />
+        <img class="photo" src="http://mikesbikes.com/images/library/large/specialized-stumpjumper-fsr-expert-carbon-evo-650b-copy-234859-1.jpg">
+      </div>
+    </div>
     </div>
   </div>
 </div>
@@ -41,6 +40,25 @@ export default {
 </script>
 
 <style lang="css">
+a{
+  font-weight: bold;
+  font-size: 20px;
+}
+
+.photo{
+  width: 200px;
+  height: 200px;
+  margin-top: 50px;
+}
+
+.col-md-12{
+  margin: 50px 50px;
+}
+.diamond{
+  width: 50px;
+  height: 50px;
+}
+
 .mission{
   padding: 50px;
 }
@@ -73,10 +91,9 @@ column-count: 2;
 column-gap: 2.5em;
 }
 .blockList{
-    margin-top: 10px;
-    display: block;
-    margin: auto;
-    width: 500px;
+    margin-top: 50px;
+    text-align: center;
+    border: 2px solid gray;
 }
 .rewards{
     font-weight: bold;

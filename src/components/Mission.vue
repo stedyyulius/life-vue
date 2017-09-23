@@ -3,10 +3,13 @@
     <Navbar></Navbar>
     <Sidebar></Sidebar>
     <div>
+      <div class="quest">
+        <img width="300px" src="../assets/Quest.png">
+      </div>
       <h2 class="title">{{missions[mission].mission}}</h2>
       <img class="page-header" :src="missions[mission].reward">
         <img class="bars" src="../assets/pb0.png" v-if="progress === false">
-        <img class="bars" src="../assets/pb20.png" v-if="progress === true">
+        <img class="bars" src="../assets/pb16.png" v-if="progress === true">
       <div class="wrap">
       <nav>
         <ul class="primary">
@@ -16,11 +19,16 @@
         </ul>
       </nav>
       </div>
-      <div class="detail">
-        <h3 class="title">{{missions[mission].quest[index]}}</h3>
-        <input class="title" type="file">
-        <br />
-        <button class="btn btn-success" @click="report()">Submit</button>
+      <div class="title">
+        <h3>{{missions[mission].quest[index]}}</h3>
+        <div v-if="isSubmit !== index">
+          <input class=" detail" type="file">
+          <br />
+          <button class="btn btn-success" @click="report()">Submit</button>
+        </div>
+        <div v-if="isSubmit === index">
+          <img class="check" src="../assets/check.png">
+        </div>
       </div>
     </div>
   </div>
@@ -38,28 +46,29 @@ export default {
       mission: 1,
       missions:
       [{
-        "id": 1,
-        "mission":"a",
-        "quest" : ['a','b'],
-        "reward": "url"
+        "mission":"Tanggung Jawab",
+        "quest" : [
+              "Bersihin Kulkas",
+              "Bersihin Kamar",
+              "Cuci Piring"
+          ],
+        "reward": "https://eigeradventure.com/media/catalog/product/cache/1/image/9df78eab33525d08d6e5fb8d27136e95/2/1/2174e01a-1.jpg"
       },{
-        "id":2,
-        "mission":"b",
-        "quest"  :["a","b"],
-        "reward" : "url"
-        },{
-        "id":3,
-        "mission":"c",
-        "quest"  :["a","b"],
-        "reward" : "url"
+        "mission":"Kesehatan",
+        "quest" : [
+        "Mendapatkan 100 di Ujian Fisika","Lari Pagi","Push Up 10x",
+        "Cuci Tangan","Makan Buah","Naik Sepeda"
+        ],
+        "reward": "http://mikesbikes.com/images/library/large/specialized-stumpjumper-fsr-expert-carbon-evo-650b-copy-234859-1.jpg"
       }],
       index:"",
-      progress: false
+      progress: false,
+      isSubmit: " "
     }
   },
   methods:{
     setData(){
-      this.mission = this.$route.query.id
+      this.mission = this.$route.query.id - 1
     },
     setQuest(index){
       this.index = index
@@ -72,8 +81,10 @@ export default {
         quest: self.missions[self.mission].quest[self.index]
       })
       .then(res=>{
-        console.log(res);
-        setTimeout(()=>{self.progress = true},7000)
+        setTimeout(()=>{
+          self.progress = true
+          self.isSubmit = self.index
+        },7000)
       })
     }
   },
@@ -84,6 +95,15 @@ export default {
 </script>
 
 <style lang="css">
+.check{
+  width: 100px;
+  height:100px;
+}
+.detail{
+  text-align: center;
+  margin-left: 380px;
+}
+
 .bars{
   width: 100%;
   height: 100%;
@@ -102,7 +122,7 @@ export default {
  -webkit-box-shadow: 0 0 70px #fff;
  -moz-box-shadow: 0 0 70px #fff;
  box-shadow: 0 0 70px #fff;
- margin-top: -280px;
+ margin-top: 0px;
  z-index: 200;
 }
 
@@ -115,12 +135,6 @@ export default {
  background: linear-gradient(left, white 50%, #6EAF8D 50%);
  background-size: 50px 25%;;
  padding: 2px;
- display: block;
-}
-
-a {
- text-decoration: none;
- color: #fff;
  display: block;
 }
 

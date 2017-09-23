@@ -1,16 +1,18 @@
 [{
-  "id": 1,
-  "mission":"",
-  "quest" : [],
-  "reward": "url"
+  "mission":"Kesehatan",
+  "quest" : ["Sikat Gigi",
+  "Lari Pagi",
+  "Push Up 10x",  "Cuci Tangan",
+    "Makan Buah",
+    "Naik Sepeda"
+  ],
+  "reward": "http://mikesbikes.com/images/library/large/specialized-stumpjumper-fsr-expert-carbon-evo-650b-copy-234859-1.jpg"
 },{
-  "id":2,
-  "mission":"",
-  "quest"  :["a","b"],
-  "reward" : "url"
-  },{
-  "id":3,
-  "mission":"",
-  "quest"  :["a","b"],
-  "reward" : "url"
-    }]
+  "mission":"Tanggung Jawab",
+  "quest" : [
+        "Bersihin Kulkas",
+        "Bersihin Kamar",
+        "Cuci Piring"
+    ],
+  "reward": "https://eigeradventure.com/media/catalog/product/cache/1/image/9df78eab33525d08d6e5fb8d27136e95/2/1/2174e01a-1.jpg"
+}]

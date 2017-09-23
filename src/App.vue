@@ -36,6 +36,7 @@ export default {
     padding: 20px;
     padding-top: 80px;
     background-color: #efefef;
+    background-image: none;
     -webkit-transition: width 0.3s ease-in-out;
     -o-transition: width 0.3s ease-in-out;
     transition: width 0.3s ease-in-out;
