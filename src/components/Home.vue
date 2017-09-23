@@ -13,15 +13,15 @@
     <div class="col-md-12">
       <div class="title"><img class="diamond" src="http://www.smiledesignnyc.com/wp-content/uploads/2016/10/Animated-Icon-for-cutting-edge-education.gif" width="20px">
         <router-link to="/mission?id=1">Tanggung Jawab</router-link></div>
-      <div class="title"><span class="rewards">REWARDS</span><br />
-        <img class="photo" src="https://eigeradventure.com/media/catalog/product/cache/1/image/9df78eab33525d08d6e5fb8d27136e95/2/1/2174e01a-1.jpg">
+      <div class="title"><br />
+        <img class="photo" src="../assets/FRAMED-REWARD-BAG.png">
       </div>
     </div>
     <div class="col-md-12">
       <div class="title"><img class="diamond" src="http://www.smiledesignnyc.com/wp-content/uploads/2016/10/Animated-Icon-for-cutting-edge-education.gif" width="20px">&nbsp;
         <router-link to="/mission?id=2">Kebersihan</router-link></div>
-      <div class="title"><span class="rewards">REWARDS</span><br />
-        <img class="photo" src="http://mikesbikes.com/images/library/large/specialized-stumpjumper-fsr-expert-carbon-evo-650b-copy-234859-1.jpg">
+      <div class="title"><br />
+        <img class="photo" src="../assets/FRAMED-REWARD-BICYCLE.png">
       </div>
     </div>
     </div>
@@ -46,9 +46,9 @@ a{
 }
 
 .photo{
-  width: 200px;
-  height: 200px;
-  margin-top: 50px;
+  width: 310px;
+  height: 310px;
+  margin-top: 0px;
 }
 
 .col-md-12{
@@ -64,7 +64,7 @@ a{
 }
 .header {
   width: 100%;
-  height: 300px;
+  height: 550px;
   background-image: url("../assets/Sky.jpg");
   background-size: cover;
   background-position: center center;
@@ -73,6 +73,7 @@ a{
 .logo{
     display: block;
     margin: auto;
+    margin-top: 100px;
     text-align: center;
 }
 .quest{
@@ -91,9 +92,8 @@ column-count: 2;
 column-gap: 2.5em;
 }
 .blockList{
-    margin-top: 50px;
+    margin-top: 30px;
     text-align: center;
-    border: 2px solid gray;
 }
 .rewards{
     font-weight: bold;

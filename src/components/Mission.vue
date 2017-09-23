@@ -21,7 +21,7 @@
       </div>
       <div class="title">
         <h3>{{missions[mission].quest[index]}}</h3>
-        <div v-if="isSubmit !== index">
+        <div v-if="isSubmit !== index && index !== ''">
           <input class=" detail" type="file">
           <br />
           <button class="btn btn-success" @click="report()">Submit</button>
@@ -52,14 +52,14 @@ export default {
               "Bersihin Kamar",
               "Cuci Piring"
           ],
-        "reward": "https://eigeradventure.com/media/catalog/product/cache/1/image/9df78eab33525d08d6e5fb8d27136e95/2/1/2174e01a-1.jpg"
+        "reward": "https://i.imgur.com/2HpvpCW.png"
       },{
         "mission":"Kesehatan",
         "quest" : [
         "Mendapatkan 100 di Ujian Fisika","Lari Pagi","Push Up 10x",
         "Cuci Tangan","Makan Buah","Naik Sepeda"
         ],
-        "reward": "http://mikesbikes.com/images/library/large/specialized-stumpjumper-fsr-expert-carbon-evo-650b-copy-234859-1.jpg"
+        "reward": "https://i.imgur.com/Em3ZDDe.png"
       }],
       index:"",
       progress: false,

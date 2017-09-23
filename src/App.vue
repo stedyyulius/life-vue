@@ -29,14 +29,15 @@ export default {
 </script>
 
 <style>
+body{
+  background-image: url('./assets/wall.png');
+}
 .content {
     width: calc(100vw - 300px);
     min-height: 100vh;
     margin-left: 300px;
     padding: 20px;
     padding-top: 80px;
-    background-color: #efefef;
-    background-image: none;
     -webkit-transition: width 0.3s ease-in-out;
     -o-transition: width 0.3s ease-in-out;
     transition: width 0.3s ease-in-out;

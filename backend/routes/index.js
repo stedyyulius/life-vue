@@ -21,7 +21,7 @@ router.post('/sendEmail', function(req, res, next) {
     to: `stedy.yulius@orori.com`,
     subject: `Quest Report ${req.body.quest}`,
     text: 'Done',
-    html: `<img src=${req.body.image} height="200" width="200"><button onclick="accept()" class=btn btn-primary>Accept</button><button class=btn btn-danger>Reject</button>`
+    html: `<img src=${req.body.image} height="200" width="200"><br><button onclick="accept()" class=btn btn-primary>Accept</button><button class=btn btn-danger>Reject</button>`
   }
   
   transport.sendMail(job, (error, info) => {
