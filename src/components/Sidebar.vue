@@ -38,21 +38,6 @@ export default {
         url: '/',
         icon: 'ion-home',
         section: 'home'
-    },{
-        name: 'Planner',
-        url: '/planner',
-        icon: 'ion-clipboard',
-        section: 'planner',
-    },{
-        name: 'Insurance',
-        url: '/insurance',
-        icon: 'ion-ios-box',
-        section: 'insurance'
-    },{
-        name: 'Goal',
-        url: '/goal',
-        icon: 'ion-disc',
-        section: 'goal',
     }],
       user: 'Stedy',
       show: 'sidebar sidebar-show'

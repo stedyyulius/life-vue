@@ -5,6 +5,8 @@
     <div>
       <h2 class="title">{{missions[mission].mission}}</h2>
       <img class="page-header" :src="missions[mission].reward">
+        <img class="bars" src="../assets/pb0.png" v-if="progress === false">
+        <img class="bars" src="../assets/pb20.png" v-if="progress === true">
       <div class="wrap">
       <nav>
         <ul class="primary">
@@ -14,18 +16,10 @@
         </ul>
       </nav>
       </div>
-      <div class="progress">
-        <div class="progress-bar" role="progressbar" aria-valuenow="10"
-        aria-valuemin="0" aria-valuemax="100" style="width:0%" v-if="progress === false">
-          <p class="value">0%</p>
-        </div>
-        <div class="progress-bar" role="progressbar" aria-valuenow="10"
-        aria-valuemin="0" aria-valuemax="100" style="width:20%" v-if="progress === true">
-          20%
-        </div>
-      </div>
       <div class="detail">
         <h3 class="title">{{missions[mission].quest[index]}}</h3>
+        <input class="title" type="file">
+        <br />
         <button class="btn btn-success" @click="report()">Submit</button>
       </div>
     </div>
@@ -74,7 +68,7 @@ export default {
       var self = this
       console.log(self.missions[self.mission].quest[self.index]);
       axios.post(`http://localhost:3000/sendEmail`,{
-        image: 'https://cdn.shopify.com/s/files/1/0232/3305/products/MB6_profile_wheels.gif?v=1491334961',
+        image: self.missions[self.mission].reward,
         quest: self.missions[self.mission].quest[self.index]
       })
       .then(res=>{
@@ -90,6 +84,13 @@ export default {
 </script>
 
 <style lang="css">
+.bars{
+  width: 100%;
+  height: 100%;
+  display: inline-block;
+  z-index: -1;
+  /*margin-top: -170px;*/
+}
 .value{
   color: black;
   text-align: center;
@@ -101,7 +102,8 @@ export default {
  -webkit-box-shadow: 0 0 70px #fff;
  -moz-box-shadow: 0 0 70px #fff;
  box-shadow: 0 0 70px #fff;
- margin-top: 40px;
+ margin-top: -280px;
+ z-index: 200;
 }
 
 /* a little "umph" */
