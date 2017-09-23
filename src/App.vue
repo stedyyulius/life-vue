@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="app">
     <router-view></router-view>
   </div>
 </template>
@@ -46,6 +46,10 @@ export default {
 .page-header{
   display:block;
   margin: auto;
+  margin-top: 50px;
   width: 50%;
+}
+.app{
+  padding-bottom: 100px
 }
 </style>

@@ -2,27 +2,195 @@
   <div>
   <Navbar></Navbar>
   <Sidebar></Sidebar>
-    <div class="content">
-      <div class="data-form" v-for="d in data">
-        {{formatDate(new Date())}}
-        <div v-for="header in d.header">
-          {{header}}
+    <div class="content row">
+      <div class="header col-md-12">
+        <img class="page-header" src="../assets/LIFE-CHECK-UP-RED.png">
+        <p class="subtitle col-md-offset-2 col-md-8">
+          How do you look into the mirror and truly asses yourself?</p>
+        <p class="subtitle col-md-offset-2 col-md-8">
+          can you accurately determine where you will in 1,2 or even 5 years?
+        </p>
+      </div>    
+      <div class="container col-md-12">
+        <h1 class="title"> Step {{page}} </h1>
+        <!-- Page 1 -->
+        <div class="table row" v-if="page === 1">
+          <h3 class="table-title">PERSONAL INFO</h3>
+          <table class="first-table">
+            <tr class="first-table-key">
+              <td class="first-table-key">Nama</td>
+              <input class="table-input" type="text" value="Stedy">
+            </tr>
+            <tr class="first-table-key">
+              <td class="first-table-key">Umur</td>
+              <input class="table-input" type="text" value="26">
+            </tr>
+            <tr class="first-table-key">
+              <td class="first-table-key">Pekerjaan</td>
+              <input class="table-input" type="text" value="Front-End Developer @ Orori.com">
+            </tr>
+          </table>
+          <h3 class="table-title">INCOME /month</h3>
+          <table class="first-table">
+            <tr class="first-table-key">
+              <td class="first-table-key">Gaji</td>
+              <input class="table-input" type="text" value="Rp11.000.000">
+            </tr>
+            <tr class="first-table-key">
+              <td class="first-table-key">Saham</td>
+              <input class="table-input" type="text" value="0">
+            </tr>
+            <tr class="first-table-key">
+              <td class="first-table-key">Aset</td>
+              <input class="table-input" type="text" value="0">
+            </tr>
+            <tr class="first-table-key">
+              <td class="first-table-key">Investasi</td>
+              <input class="table-input" type="text" value="0">
+            </tr>
+            <tr class="first-table-key">
+              <td class="first-table-key">TOTAL</td>
+              <input class="total" type="text" value="Rp11.000.000">
+            </tr>
+          </table>
         </div>
-        <div class="data-key">
-          Total: {{d.total}}
+        <!-- Page 2 -->
+        <div class="table row" v-if="page === 2">
+          <h3 class="table-title">PERSONAL EXPENSE</h3>
+          <table class="second-table">
+            <tr class="second-table-key">
+              <td class="second-table-key">Makan</td>
+              <input class="table-input" type="text" value="Rp1.200.000">
+            </tr>
+            <tr class="second-table-key">
+              <td class="second-table-key">Pulsa</td>
+              <input class="table-input" type="text" value="Rp100.000">
+            </tr>
+            <tr class="second-table-key">
+              <td class="second-table-key">Cicilan Kartu Kredit</td>
+              <input class="table-input" type="text" value="0">
+            </tr>
+            <tr class="second-table-key">
+              <td class="second-table-key">Cicilan Lain</td>
+              <input class="table-input" type="text" value="Rp2.300.000">
+            </tr>
+            <tr class="second-table-key">
+              <td class="second-table-key">Asuransi</td>
+              <input class="table-input" type="text" value="0">
+            </tr>
+            <tr class="second-table-key">
+              <td class="second-table-key">Transportasi</td>
+              <input class="table-input" type="text" value="Rp200.000">
+            </tr>
+            <tr class="second-table-key">
+              <td class="second-table-key">Keperluan pribadi</td>
+              <input class="table-input" type="text" value="Rp1.000.000">
+            </tr>
+            <tr class="second-table-key">
+              <td class="second-table-key">Lain-lain</td>
+              <input class="table-input" type="text" value="Rp1.500.000">
+            </tr>
+            <tr class="second-table-key">
+              <td class="second-table-key">Total</td>
+              <input class="total" type="text" value="Rp6.300.000">
+            </tr>
+          </table>
+          <h3 class="table-title">Household Expense /month (Jika Ada)</h3>
+          <table class="second-table">
+            <tr class="second-table-key">
+              <td class="second-table-key">Belanja Bulanan</td>
+              <input class="table-input" type="text" value="Rp100.000">
+            </tr>
+            <tr class="second-table-key">
+              <td class="second-table-key">Listrik, Gas, Air, Keamanan</td>
+              <input class="table-input" type="text" value="Rp50.000">
+            </tr>
+            <tr class="second-table-key">
+              <td class="second-table-key">Internet Rumah</td>
+              <input class="table-input" type="text" value="0">
+            </tr>
+            <tr class="second-table-key">
+              <td class="second-table-key">Anak (Jika ada)</td>
+              <input class="table-input" type="text" value="0">
+            </tr>
+            <tr class="second-table-key">
+              <td class="second-table-key">Cicilan Property</td>
+              <input class="table-input" type="text" value="0">
+            </tr>
+            <tr class="second-table-key">
+              <td class="second-table-key">Pembantu</td>
+              <input class="table-input" type="text" value="0">
+            </tr>
+            <tr class="second-table-key">
+              <td class="second-table-key">Hutang</td>
+              <input class="table-input" type="text" value="0">
+            </tr>
+            <tr class="second-table-key">
+              <td class="second-table-key">Arisan</td>
+              <input class="table-input" type="text" value="0">
+            </tr>
+            <tr class="second-table-key">
+              <td class="second-table-key">Total</td>
+              <input class="total" type="text" value="Rp150.000">
+            </tr>
+          </table>
+        </div>
+        <!-- Page 3 -->
+        <div class="table row" v-if="page === 3">
+          <h3 class="table-title">TOTAL AKHIR</h3>
+          <table class="second-table">
+            <tr class="second-table-key">
+              <td class="second-table-key">TOTAL INCOME</td>
+              <input class="total" type="text" value="Rp11.000.000">
+            </tr>
+            <tr class="second-table-key">
+              <td class="second-table-key">TOTAL EXPENSE</td>
+              <input class="total" type="text" value="Rp6.450.000">
+            </tr>
+            <tr class="second-table-key">
+              <td class="second-table-key">JUMLAH AKHIR</td>
+              <input class="total" type="text" value="Rp4.550.000">
+            </tr>
+          </table>
+          <h3 class="table-title">KESEHATAN KEUANGAN</h3>
+          <table class="second-table">
+            <tr class="second-table-key">
+              <input class="table-input" type="text" value="">
+            </tr>
+            <tr class="second-table-key">
+              <input class="table-input" type="text" value="">
+            </tr>
+          </table>
+        </div>
+        <!-- Page 4 -->
+        <div v-if="page === 4" class="col-md-offset-2 col-md-8">
+          <div class="data-form" v-for="d in data">
+           <div class="data-head">{{formatDate(new Date())}}</div>
+           <div v-for="header in d.header">
+             {{header}}
+           </div>
+           <div class="data-key">
+             Total: {{d.total}}
+           </div>
+          </div>
+          <div>Total Expenses on {{formatDate(new Date())}}: 
+            <div class="data-key">Rp{{currencyFormatter(totalDay)}}</div>
+          </div>
+        <div class="speech-form">
+          <h4>Input Your Expense</h4>
+          <button @click="speechToText()"><i class="fa fa-microphone"></i></button>
+          <div v-for="s in stringSpeech">
+            <input type="text" :value="s">
+          </div>
+          <select>
+            <option>{{monthlyExpenses[expenseIndex]}}</option>
+          </select>
+          <input v-model="numberSpeech" type="text">
+          <button type="button" class="btn btn-primary" @click="save()">Save</button>
         </div>
       </div>
-      <div>Total Expenses on {{formatDate(new Date())}}: 
-        <div class="data-key">Rp{{currencyFormatter(totalDay)}}</div>
-        </div>
-      <div class="speech-form">
-        <button @click="speechToText()"><i class="fa fa-microphone"></i></button>
-        <div v-for="s in stringSpeech">
-          <input type="text" :value="s">
-        </div>
-        <input v-model="numberSpeech" type="text" >
-        <button type="button" class="btn btn-primary" @click="save()">Save</button>
-      </div>
+      <button class="page-header btn btn-primary" @click="nextPage()">Next Step</button>
+    </div>
     </div>
   </div>
 </template>
@@ -36,21 +204,27 @@ export default {
   },
   data(){
     return{
-      stringSpeech  : "",
-      numberSpeech  : "",
-      counter       : 0,
-      result        : [],
-      data          : [],
-      totalDay      : ""
+      stringSpeech    : "",
+      numberSpeech    : "",
+      counter         : 0,
+      result          : [],
+      data            : [],
+      totalDay        : "",
+      monthlyExpenses : ["halo","juga"],
+      expenseIndex    : 0,
+      page            : 1
     }
   },
   methods:{
+    nextPage(){
+      this.page += 1
+    },
     formatDate(date) {
       var monthNames = [
-        "January", "February", "March",
-        "April", "May", "June", "July",
-        "August", "September", "October",
-        "November", "December"
+        "Jan", "Feb", "Mar",
+        "Apr", "May", "Jun", "Jul",
+        "Aug", "Sep", "Oct",
+        "Nov", "Dec"
       ];
 
       var day = date.getDate();
@@ -96,6 +270,11 @@ export default {
             //   },500)
             // }
             if(event.results[i].isFinal){
+              if(self.expenseIndex < self.monthlyExpenses.length - 1){
+                 self.expenseIndex += 1
+              } else{
+                self.expenseIndex = 0
+              }  
               // var filterString = transcript.split(' ').filter(function(f,index){
               //   return !+f && f !== ""
               // })
@@ -123,7 +302,7 @@ export default {
           }
             self.stringSpeech = strings 
             self.numberSpeech = `Rp${self.currencyFormatter(total)}`
-            self.counter      = self.counter += 1             
+            self.counter      = self.counter += 1           
         };
         speechRecognizer.onerror = function (event) {
         };
@@ -205,12 +384,96 @@ export default {
 </script>
 
 <style lang="css">
+  .table{
+    text-align: center;
+    margin: auto;
+  }
+
+  .required{
+    color: red;
+  }
+
+  .first-table{
+    border: 2px solid red;
+    font-size: 25px;
+    text-align: center;
+    width: 100%;
+  }
+
+  .first-table-key{
+    border: 2px solid red;
+    margin: 10px;
+    padding-left: 30px;
+    padding-right: 30px;
+    font-weight: bold;
+  }
+  
+  .second-table{
+    border: 2px solid blue;
+    font-size: 25px;
+    text-align: center;
+    width: 100%;
+  }
+
+  .second-table-key{
+    border: 2px solid blue;
+    margin: 10px;
+    padding-left: 30px;
+    padding-right: 30px;
+    font-weight: bold;
+  }
+  
+  table, th, td {
+    border: 1px solid black;
+}
+
+  .table-input{
+    width:100%;
+    text-align: center;
+    font-weight: normal;
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+  
+  .total{
+    text-align: center;
+    font-weight: bold;
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+
+  .table-title{
+    text-align: center;
+    font-size: 25px;
+    color: gray;
+    font-weight: bold;
+  }
+
+  .subtitle{
+    text-align: center;
+    color: gray;
+    margin-top: -13px;
+    font-size: 18px;
+  }
+
   .speech-form{
     margin-top: 50px;
   }
   
+  .header{
+    border-bottom: 2px solid gray;
+    margin-bottom: 20px;
+  }
+  
+  .data-head{
+    font-weight: bold;
+    border-bottom: 2px solid;
+  }
+  
   .data-form{
-    margin: 40px;  
+    margin: 40px;
+    border: 2px solid;
+    text-align: center;
   }
   .data-key{
     font-weight: bold;
