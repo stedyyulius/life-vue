@@ -46,7 +46,7 @@ export default {
 .page-header{
   display:block;
   margin: auto;
-  margin-top: 50px;
+  margin-top: 10px;
   width: 50%;
 }
 .app{
