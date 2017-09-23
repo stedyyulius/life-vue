@@ -77,7 +77,7 @@ export default {
       var self = this
       console.log(self.missions[self.mission].quest[self.index]);
       axios.post(`http://localhost:3000/sendEmail`,{
-        image: self.missions[self.mission].reward,
+        image: 'http://www.kaorinusantara.or.id/wp-content/uploads/2015/07/test.jpg',
         quest: self.missions[self.mission].quest[self.index]
       })
       .then(res=>{
