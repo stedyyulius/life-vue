@@ -5,6 +5,8 @@ import Risk from '@/components/Risk'
 import Insurance from '@/components/Insurance'
 import Planner from '@/components/Planner'
 import Goal from '@/components/Goal'
+import Home from '@/components/Home'
+import Mission from '@/components/Mission'
 
 Vue.use(Router)
 
@@ -12,8 +14,8 @@ export default new Router({
   routes: [
     {
       path: '/',
-      name: 'Risk',
-      component: Risk
+      name: 'Home',
+      component: Home
     },
     {
       path: '/login',
@@ -21,9 +23,9 @@ export default new Router({
       component: Auth
     },
     {
-      path: '/insurance',
-      name: 'Insurance',
-      component: Insurance
+      path: '/mission',
+      name: 'Mission',
+      component: Mission
     },
     {
       path: '/planner',
