@@ -47,7 +47,7 @@ export default {
 .header {
   width: 100%;
   height: 300px;
-  background-image: url("../assets/Sky.jpg");
+  background-image: url("../assets/Banner.jpg");
   background-size: cover;
   background-position: center center;
   position: relative;
