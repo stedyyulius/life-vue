@@ -12,14 +12,18 @@
     <div class="blockList">
     <div class="col-md-12">
       <div class="title"><img class="diamond" src="http://www.smiledesignnyc.com/wp-content/uploads/2016/10/Animated-Icon-for-cutting-edge-education.gif" width="20px">
-        <router-link to="/mission?id=1">Tanggung Jawab</router-link></div>
+        <router-link to="/mission?id=1">Strength Mission</router-link></div>
+        <img class="icon" src="https://vignette.wikia.nocookie.net/unisonleague/images/4/42/Stat-ATK_002_Icon.png/revision/latest?cb=20160715021011">
+        + 3
       <div class="title"><br />
         <img class="photo" src="../assets/FRAMED-REWARD-BAG.png">
       </div>
     </div>
     <div class="col-md-12">
       <div class="title"><img class="diamond" src="http://www.smiledesignnyc.com/wp-content/uploads/2016/10/Animated-Icon-for-cutting-edge-education.gif" width="20px">&nbsp;
-        <router-link to="/mission?id=2">Kebersihan</router-link></div>
+        <router-link to="/mission?id=2">Intelligence Mission</router-link></div>
+        <img class="icon" src="http://www.freeiconspng.com/uploads/brain-icon-png-12.png">
+        + 6
       <div class="title"><br />
         <img class="photo" src="../assets/FRAMED-REWARD-BICYCLE.png">
       </div>
@@ -40,6 +44,10 @@ export default {
 </script>
 
 <style lang="css">
+.icon{
+	width: 30px;
+	height:30px;
+}
 a{
   font-weight: bold;
   font-size: 20px;

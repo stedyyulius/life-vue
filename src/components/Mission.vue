@@ -46,7 +46,7 @@ export default {
       mission: 1,
       missions:
       [{
-        "mission":"Tanggung Jawab",
+        "mission":"Strength Mission",
         "quest" : [
               "Bersihin Kulkas",
               "Bersihin Kamar",
@@ -54,10 +54,10 @@ export default {
           ],
         "reward": "https://i.imgur.com/2HpvpCW.png"
       },{
-        "mission":"Kesehatan",
+        "mission":"Intelligence Mission",
         "quest" : [
-        "Mendapatkan 100 di Ujian Fisika","Lari Pagi","Push Up 10x",
-        "Cuci Tangan","Makan Buah","Naik Sepeda"
+        "Mendapatkan 100 di Ujian Fisika","Mendapatkan 80+ di Ujian Matimatika","Mendapatkan 100 di Ujian BI",
+        "Mendapatkan 100 di Ujian Agama","Mendapatkan 100 di Ujian Biologi","Mendapatkan 100 di Ujian Fisika"
         ],
         "reward": "https://i.imgur.com/Em3ZDDe.png"
       }],
