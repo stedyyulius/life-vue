@@ -48,8 +48,8 @@ export default {
       [{
         "mission":"Strength Mission",
         "quest" : [
-              "Bersihin Kulkas",
-              "Bersihin Kamar",
+              "Bersihkan Kulkas",
+              "Bersihkan Kamar",
               "Cuci Piring"
           ],
         "reward": "https://i.imgur.com/2HpvpCW.png"
